@@ -1,0 +1,44 @@
+.b-form {
+  width: 100%;
+  @include flex(row, space-between, flex-start);
+}
+
+.formgrp {
+  flex-basis: 50%;
+  @include flex(column, flex-start, flex-start);
+
+  textarea {
+    width: 90%;
+    min-height: 400px;
+    display: block;
+
+  }
+
+  input {
+    width: 60%;
+    padding: .5em;
+    margin: .5em 0;
+    display: block;
+  }
+
+  button {
+    padding: .5em 1em;
+    margin-top: 1em;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    background-color: $blue;
+    color: $lightgray;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2em;
+    text-transform: uppercase;
+
+    @include responsive(max, $sm-laptop) { font-size: 24px; }
+    @include responsive(max, $tab) { font-size: 20px; }
+
+    &:hover {
+      @include responsive(min, $sm-laptop) { background-color: darken($blue, 20%); }
+    }
+  }
+}

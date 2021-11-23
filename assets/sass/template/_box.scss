@@ -1,0 +1,23 @@
+.box-ctn {
+  width: 100%;
+  margin: 1em 0;
+  @include flex(row, space-between, center);
+}
+
+.box {
+  flex-basis: 12%;
+  min-height: 200px;
+  border: 1px solid $gray;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+  @include flex(column, flex-start, flex-start);
+  background-color: $white;
+}
+
+.heading {
+  width: calc(100% - 1em);
+  padding: .2em .5em;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+  background-color: $purple;
+}
