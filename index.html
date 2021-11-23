@@ -13,31 +13,31 @@
       <div class="wrapper">
         <h1 class="title">Birthday Calendar</h1>
         <div class="box-ctn">
-          <div class="box monday">
+          <div class="box" data-day="mon">
             <span class="heading">Mon</span>
           </div>
-          <div class="box tuesday">
+          <div class="box" data-day="tue">
             <span class="heading">Tue</span>
           </div>
-          <div class="box wednesday">
+          <div class="box" data-day="wed">
             <span class="heading">Wed</span>
           </div>
-          <div class="box thrusday">
+          <div class="box" data-day="thu">
             <span class="heading">Thu</span>
           </div>
-          <div class="box friday">
+          <div class="box" data-day="fri">
             <span class="heading">Fri</span>
           </div>
-          <div class="box saturday">
+          <div class="box" data-day="sat">
             <span class="heading">Sat</span>
           </div>
-          <div class="box sunday">
+          <div class="box" data-day="sun">
             <span class="heading">Sun</span>
           </div>
         </div>
         <form class="b-form" method="post">
           <div class="formgrp">
-            <textarea name="json-data" id="json-data" cols="30" rows="10"></textarea>
+            <textarea name="json-data" id="json-data" cols="30" rows="10" required></textarea>
           </div>
           <div class="formgrp">
             <label for="year">Year</label>
@@ -48,5 +48,6 @@
       </div>
     </section>
   </div>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
