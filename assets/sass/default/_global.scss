@@ -1,0 +1,37 @@
+@import 'mixin';
+@import 'variables';
+
+.wrapper {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+  @include flex(column, center, center);
+  @include responsive(max, $sm-laptop) { width: 95%; }
+}
+
+.title {  
+  line-height: 1.2em;
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  
+  @include responsive(max, $sm-laptop) { font-size: 28px; }
+  @include responsive(max, $tab) { font-size: 24px; }
+}
+
+.heading {  
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1em;
+
+  @include responsive(max, $sm-laptop) { font-size: 17px; }
+  @include responsive(max, $tab) { font-size: 15px; }
+}
+
+section { 
+  padding: 50px 0;
+  background-color: $lightgray;
+
+  @include responsive(max, $sm-laptop) { padding: 40px 0; }
+  @include responsive(max, $tab) { padding: 30px 0; }
+}

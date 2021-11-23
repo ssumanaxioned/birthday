@@ -1,0 +1,27 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -ms-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin icons($type, $loc) {
+  &::#{$loc} {
+    font-family: "Font Awesome 5 #{$type}";
+    font-weight: 900;
+    text-indent: 0;
+    @content;
+  }
+}
+
+@mixin responsive($value, $width) {
+  @media ( #{$value}-width: $width ) {
+    @content;
+  }
+}
